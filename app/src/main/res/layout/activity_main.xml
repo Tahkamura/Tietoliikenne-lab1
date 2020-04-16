@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/Teksti"
+        android:text="Paina ensin nappia get location saadaksesi koordinaatit ja sen jälkeen geocode nappia saadaksesi maan ja kaupungin koordinaattien perusteella. Html nappi hakee yllä olevasta tekstikentästä urlin ja tulostaa sen."
+        app:layout_constraintBottom_toTopOf="@id/hmtlTxt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hmtlEdit"
+        android:background="#9A9292"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="https://www.oamk.fi/"
+        app:layout_constraintTop_toBottomOf="@id/hmtlBtn"
+        android:id="@+id/hmtlEdit"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/hmtlTxt"
+        app:layout_constraintTop_toBottomOf="@id/Teksti"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="#5A5959"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get location"
+        android:id="@+id/locationBtn"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="Geocode"
+        android:id="@+id/geoBtn"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="html"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/hmtlBtn"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
